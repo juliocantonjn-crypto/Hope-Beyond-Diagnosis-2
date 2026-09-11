@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: juliocantonjn-crypto/Hope-Beyond-Diagnosis-2
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "site"
+    label: "Sitio web"
+    files:
+      - file: "index.html"
+        label: "Pagina completa (codigo HTML)"
+        name: "homepage"
+        fields:
+          - label: "Contenido HTML completo"
+            name: "body"
+            widget: "code"
+            default_language: "html"
+            allow_language_selection: false
+            output_code_only: true
