@@ -2,21 +2,1004 @@ backend:
   name: github
   repo: juliocantonjn-crypto/Hope-Beyond-Diagnosis-2
   branch: main
-
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
-
+media_folder: images/uploads
+public_folder: /images/uploads
 collections:
-  - name: "site"
-    label: "Sitio web"
-    files:
-      - file: "index.html"
-        label: "Pagina completa (codigo HTML)"
-        name: "homepage"
-        fields:
-          - label: "Contenido HTML completo"
-            name: "body"
-            widget: "code"
-            default_language: "html"
-            allow_language_selection: false
-            output_code_only: true
+- name: content
+  label: Contenido del sitio (por seccion)
+  files:
+  - file: content/en.json
+    label: Textos de la web (ingles)
+    name: site_content
+    fields:
+    - label: Menu de navegacion
+      name: nav
+      widget: object
+      collapsed: true
+      fields:
+      - label: Tagline
+        name: tagline
+        widget: string
+      - label: About
+        name: about
+        widget: string
+      - label: Resources
+        name: resources
+        widget: string
+      - label: Stories
+        name: stories
+        widget: string
+      - label: Community
+        name: community
+        widget: string
+      - label: Events
+        name: events
+        widget: string
+      - label: Contact
+        name: contact
+        widget: string
+      - label: Volunteer
+        name: volunteer
+        widget: string
+      - label: Join Us
+        name: joinUs
+        widget: string
+    - label: Inicio (Home)
+      name: home
+      widget: object
+      collapsed: true
+      fields:
+      - label: Cabecera - Etiqueta superior
+        name: hero_eyebrow
+        widget: string
+      - label: Cabecera - Titulo
+        name: hero_title
+        widget: text
+      - label: Cabecera - Texto introductorio
+        name: hero_lede
+        widget: text
+      - label: Cabecera - Find Support
+        name: hero_findSupport
+        widget: string
+      - label: Cabecera - Explore Resources
+        name: hero_exploreResources
+        widget: string
+      - label: Cabecera - Our Story
+        name: hero_ourStory
+        widget: string
+      - label: Cabecera - Share Story
+        name: hero_shareStory
+        widget: string
+      - label: Cabecera - Trust1
+        name: hero_trust1
+        widget: string
+      - label: Cabecera - Trust2
+        name: hero_trust2
+        widget: string
+      - label: Story - Founder Age
+        name: story_founderAge
+        widget: string
+      - label: Story - Etiqueta superior
+        name: story_eyebrow
+        widget: string
+      - label: Story - Titulo
+        name: story_title
+        widget: string
+      - label: Story - Texto
+        name: story_body
+        widget: text
+      - label: Story - Boton / enlace
+        name: story_cta
+        widget: string
+      - label: Offer - Etiqueta superior
+        name: offer_eyebrow
+        widget: string
+      - label: Offer - Titulo
+        name: offer_title
+        widget: string
+      - label: Offer - Texto introductorio
+        name: offer_lede
+        widget: text
+      - label: Offer - Card1 - Titulo
+        name: offer_card1_title
+        widget: string
+      - label: Offer - Card1 - Texto
+        name: offer_card1_body
+        widget: text
+      - label: Offer - Card1 - Link
+        name: offer_card1_link
+        widget: string
+      - label: Offer - Card2 - Titulo
+        name: offer_card2_title
+        widget: string
+      - label: Offer - Card2 - Texto
+        name: offer_card2_body
+        widget: text
+      - label: Offer - Card2 - Link
+        name: offer_card2_link
+        widget: string
+      - label: Offer - Card3 - Titulo
+        name: offer_card3_title
+        widget: string
+      - label: Offer - Card3 - Texto
+        name: offer_card3_body
+        widget: text
+      - label: Offer - Card3 - Link
+        name: offer_card3_link
+        widget: string
+      - label: Newsletter - Etiqueta superior
+        name: newsletter_eyebrow
+        widget: string
+      - label: Newsletter - Titulo
+        name: newsletter_title
+        widget: string
+      - label: Newsletter - Texto
+        name: newsletter_body
+        widget: text
+      - label: Newsletter - Subscribe
+        name: newsletter_subscribe
+        widget: string
+      - label: Newsletter - Note
+        name: newsletter_note
+        widget: string
+      - label: Newsletter - Placeholder
+        name: newsletter_placeholder
+        widget: string
+    - label: Sobre nosotros (Our Story)
+      name: about
+      widget: object
+      collapsed: true
+      fields:
+      - label: Cabecera - Etiqueta superior
+        name: hero_eyebrow
+        widget: string
+      - label: Cabecera - Titulo
+        name: hero_title
+        widget: string
+      - label: Cabecera - Texto introductorio
+        name: hero_lede
+        widget: text
+      - label: Challenge - Titulo
+        name: challenge_title
+        widget: string
+      - label: Challenge - Texto
+        name: challenge_body
+        widget: text
+      - label: Mission - Titulo
+        name: mission_title
+        widget: string
+      - label: Mission - Texto
+        name: mission_body
+        widget: text
+      - label: Vision - Titulo
+        name: vision_title
+        widget: string
+      - label: Vision - Texto
+        name: vision_body
+        widget: text
+      - label: Values - Titulo
+        name: values_title
+        widget: string
+      - label: Value1 - Titulo
+        name: value1_title
+        widget: string
+      - label: Value1 - Texto
+        name: value1_body
+        widget: text
+      - label: Value2 - Titulo
+        name: value2_title
+        widget: string
+      - label: Value2 - Texto
+        name: value2_body
+        widget: text
+      - label: Value3 - Titulo
+        name: value3_title
+        widget: string
+      - label: Value3 - Texto
+        name: value3_body
+        widget: text
+      - label: Value4 - Titulo
+        name: value4_title
+        widget: string
+      - label: Value4 - Texto
+        name: value4_body
+        widget: text
+      - label: Story - Titulo de seccion
+        name: story_h2
+        widget: string
+      - label: Story - Parrafo 1
+        name: story_p1
+        widget: text
+      - label: Story - Parrafo 2
+        name: story_p2
+        widget: text
+      - label: Story - Parrafo 3
+        name: story_p3
+        widget: text
+      - label: Story - Parrafo 4
+        name: story_p4
+        widget: text
+      - label: Story - Parrafo 5
+        name: story_p5
+        widget: text
+      - label: Story - Cita
+        name: story_quote
+        widget: string
+      - label: Story - Prensa
+        name: story_press
+        widget: string
+      - label: Timeline - Etiqueta superior
+        name: timeline_eyebrow
+        widget: string
+      - label: Timeline - Titulo
+        name: timeline_title
+        widget: string
+      - label: Paso 1 - Etiqueta
+        name: tl1_tag
+        widget: string
+      - label: Paso 1 - Titulo
+        name: tl1_title
+        widget: string
+      - label: Paso 1 - Texto
+        name: tl1_body
+        widget: text
+      - label: Paso 2 - Etiqueta
+        name: tl2_tag
+        widget: string
+      - label: Paso 2 - Titulo
+        name: tl2_title
+        widget: string
+      - label: Paso 2 - Texto
+        name: tl2_body
+        widget: string
+      - label: Paso 3 - Etiqueta
+        name: tl3_tag
+        widget: string
+      - label: Paso 3 - Titulo
+        name: tl3_title
+        widget: string
+      - label: Paso 3 - Texto
+        name: tl3_body
+        widget: string
+      - label: Paso 4 - Etiqueta
+        name: tl4_tag
+        widget: string
+      - label: Paso 4 - Titulo
+        name: tl4_title
+        widget: string
+      - label: Paso 4 - Texto
+        name: tl4_body
+        widget: string
+      - label: Paso 5 - Etiqueta
+        name: tl5_tag
+        widget: string
+      - label: Paso 5 - Titulo
+        name: tl5_title
+        widget: string
+      - label: Paso 5 - Texto
+        name: tl5_body
+        widget: text
+      - label: Paso 6 - Etiqueta
+        name: tl6_tag
+        widget: string
+      - label: Paso 6 - Titulo
+        name: tl6_title
+        widget: string
+      - label: Paso 6 - Texto
+        name: tl6_body
+        widget: text
+    - label: Centro de recursos
+      name: rc
+      widget: object
+      collapsed: true
+      fields:
+      - label: Cabecera - Etiqueta superior
+        name: hero_eyebrow
+        widget: string
+      - label: Cabecera - Titulo
+        name: hero_title
+        widget: string
+      - label: Cabecera - Texto introductorio
+        name: hero_lede
+        widget: text
+      - label: Aviso - Titulo
+        name: notice_title
+        widget: string
+      - label: Aviso - Texto
+        name: notice_body
+        widget: text
+      - label: Enlaces externos - Etiqueta superior
+        name: ext_eyebrow
+        widget: string
+      - label: Enlaces externos - Titulo
+        name: ext_title
+        widget: string
+      - label: Enlaces externos - Texto
+        name: ext_body
+        widget: text
+      - label: Enlaces externos - Disclaimer
+        name: ext_disclaimer
+        widget: text
+      - label: Falta algo - Etiqueta superior
+        name: missing_eyebrow
+        widget: string
+      - label: Falta algo - Titulo
+        name: missing_title
+        widget: string
+      - label: Falta algo - Texto
+        name: missing_body
+        widget: text
+      - label: Search - Placeholder
+        name: search_placeholder
+        widget: string
+    - label: Historias familiares
+      name: stories
+      widget: object
+      collapsed: true
+      fields:
+      - label: Cabecera - Etiqueta superior
+        name: hero_eyebrow
+        widget: string
+      - label: Cabecera - Titulo
+        name: hero_title
+        widget: string
+      - label: Cabecera - Texto introductorio
+        name: hero_lede
+        widget: text
+      - label: Empty - T
+        name: empty_t
+        widget: string
+      - label: Empty - B
+        name: empty_b
+        widget: text
+      - label: Form1 - Etiqueta superior
+        name: form1_eyebrow
+        widget: string
+      - label: Form1 - Titulo
+        name: form1_title
+        widget: string
+      - label: Form1 - Texto
+        name: form1_body
+        widget: text
+      - label: Form1 - Boton / enlace
+        name: form1_cta
+        widget: string
+      - label: Form2 - Etiqueta superior
+        name: form2_eyebrow
+        widget: string
+      - label: Form2 - Titulo
+        name: form2_title
+        widget: string
+      - label: Form2 - Texto
+        name: form2_body
+        widget: text
+      - label: Formulario - Name
+        name: f_name
+        widget: string
+      - label: Formulario - Country
+        name: f_country
+        widget: string
+      - label: Formulario - Age
+        name: f_age
+        widget: string
+      - label: Formulario - Diag
+        name: f_diag
+        widget: string
+      - label: Formulario - Anon
+        name: f_anon
+        widget: string
+      - label: Formulario - Text
+        name: f_text
+        widget: string
+      - label: Formulario - Name - Texto de ejemplo (placeholder)
+        name: f_name_ph
+        widget: string
+      - label: Formulario - Country - Texto de ejemplo (placeholder)
+        name: f_country_ph
+        widget: string
+    - label: Envio de formularios (Email/WhatsApp)
+      name: dual
+      widget: object
+      collapsed: true
+      fields:
+      - label: Email
+        name: email
+        widget: string
+      - label: Whatsapp
+        name: whatsapp
+        widget: string
+      - label: Note
+        name: note
+        widget: text
+    - label: Comunidad
+      name: community
+      widget: object
+      collapsed: true
+      fields:
+      - label: Cabecera - Etiqueta superior
+        name: hero_eyebrow
+        widget: string
+      - label: Cabecera - Titulo
+        name: hero_title
+        widget: string
+      - label: Cabecera - Texto introductorio
+        name: hero_lede
+        widget: text
+      - label: Aviso - Titulo
+        name: notice_title
+        widget: string
+      - label: Aviso - Texto
+        name: notice_body
+        widget: text
+      - label: Form - Etiqueta superior
+        name: form_eyebrow
+        widget: string
+      - label: Form - Titulo
+        name: form_title
+        widget: string
+      - label: Form - Texto
+        name: form_body
+        widget: text
+      - label: Form - Boton / enlace
+        name: form_cta
+        widget: string
+      - label: V1 - Titulo
+        name: v1_title
+        widget: string
+      - label: V1 - Texto
+        name: v1_body
+        widget: text
+      - label: V2 - Titulo
+        name: v2_title
+        widget: string
+      - label: V2 - Texto
+        name: v2_body
+        widget: text
+      - label: V3 - Titulo
+        name: v3_title
+        widget: string
+      - label: V3 - Texto
+        name: v3_body
+        widget: text
+      - label: News - Etiqueta superior
+        name: news_eyebrow
+        widget: string
+      - label: News - Titulo
+        name: news_title
+        widget: string
+      - label: News - Texto
+        name: news_body
+        widget: string
+      - label: News - Boton / enlace
+        name: news_cta
+        widget: string
+    - label: Colaboradores
+      name: partners
+      widget: object
+      collapsed: true
+      fields:
+      - label: Cabecera - Etiqueta superior
+        name: hero_eyebrow
+        widget: string
+      - label: Cabecera - Titulo
+        name: hero_title
+        widget: string
+      - label: Cabecera - Texto introductorio
+        name: hero_lede
+        widget: text
+      - label: C1 - T
+        name: c1_t
+        widget: string
+      - label: C1 - B
+        name: c1_b
+        widget: text
+      - label: C2 - T
+        name: c2_t
+        widget: string
+      - label: C2 - B
+        name: c2_b
+        widget: text
+      - label: C3 - T
+        name: c3_t
+        widget: string
+      - label: C3 - B
+        name: c3_b
+        widget: text
+      - label: C4 - T
+        name: c4_t
+        widget: string
+      - label: C4 - B
+        name: c4_b
+        widget: text
+      - label: Form - Etiqueta superior
+        name: form_eyebrow
+        widget: string
+      - label: Form - Titulo
+        name: form_title
+        widget: string
+      - label: Form - Texto introductorio
+        name: form_lede
+        widget: string
+      - label: Org
+        name: org
+        widget: string
+      - label: Type
+        name: type
+        widget: string
+      - label: Contact
+        name: contact
+        widget: string
+      - label: Msg
+        name: msg
+        widget: string
+    - label: Voluntariado
+      name: vol
+      widget: object
+      collapsed: true
+      fields:
+      - label: Email
+        name: email
+        widget: string
+      - label: Cabecera - Etiqueta superior
+        name: hero_eyebrow
+        widget: string
+      - label: Cabecera - Titulo
+        name: hero_title
+        widget: string
+      - label: Cabecera - Texto introductorio
+        name: hero_lede
+        widget: text
+      - label: Name
+        name: name
+        widget: string
+      - label: Skills
+        name: skills
+        widget: string
+      - label: Avail
+        name: avail
+        widget: string
+      - label: Interest
+        name: interest
+        widget: string
+      - label: Skills - Texto de ejemplo (placeholder)
+        name: skills_ph
+        widget: string
+      - label: Avail - Texto de ejemplo (placeholder)
+        name: avail_ph
+        widget: string
+    - label: Eventos
+      name: events
+      widget: object
+      collapsed: true
+      fields:
+      - label: Cabecera - Etiqueta superior
+        name: hero_eyebrow
+        widget: string
+      - label: Cabecera - Titulo
+        name: hero_title
+        widget: string
+      - label: Cabecera - Texto introductorio
+        name: hero_lede
+        widget: text
+      - label: Aviso - T
+        name: notice_t
+        widget: string
+      - label: Aviso - B
+        name: notice_b
+        widget: text
+    - label: Preguntas frecuentes
+      name: faq
+      widget: object
+      collapsed: true
+      fields:
+      - label: Cabecera - Etiqueta superior
+        name: hero_eyebrow
+        widget: string
+      - label: Cabecera - Titulo
+        name: hero_title
+        widget: string
+      - label: Q1
+        name: q1
+        widget: string
+      - label: A1
+        name: a1
+        widget: text
+      - label: Q2
+        name: q2
+        widget: string
+      - label: A2
+        name: a2
+        widget: text
+      - label: Q3
+        name: q3
+        widget: string
+      - label: A3
+        name: a3
+        widget: text
+      - label: Q4
+        name: q4
+        widget: string
+      - label: A4
+        name: a4
+        widget: text
+      - label: Q5
+        name: q5
+        widget: string
+      - label: A5
+        name: a5
+        widget: text
+      - label: Q6
+        name: q6
+        widget: string
+      - label: A6
+        name: a6
+        widget: text
+      - label: Q7
+        name: q7
+        widget: string
+      - label: A7
+        name: a7
+        widget: text
+      - label: Q8
+        name: q8
+        widget: string
+      - label: A8
+        name: a8
+        widget: text
+    - label: Contacto
+      name: contact
+      widget: object
+      collapsed: true
+      fields:
+      - label: Cabecera - Etiqueta superior
+        name: hero_eyebrow
+        widget: string
+      - label: Cabecera - Titulo
+        name: hero_title
+        widget: string
+      - label: Cabecera - Texto introductorio
+        name: hero_lede
+        widget: text
+      - label: C1 - T
+        name: c1_t
+        widget: string
+      - label: C1 - B
+        name: c1_b
+        widget: string
+      - label: Name
+        name: name
+        widget: string
+      - label: Subject
+        name: subject
+        widget: string
+      - label: Msg
+        name: msg
+        widget: string
+      - label: Note
+        name: note
+        widget: text
+    - label: Recaudacion de fondos
+      name: fund
+      widget: object
+      collapsed: true
+      fields:
+      - label: Cabecera - Etiqueta superior
+        name: hero_eyebrow
+        widget: string
+      - label: Cabecera - Titulo
+        name: hero_title
+        widget: string
+      - label: Cabecera - Texto introductorio
+        name: hero_lede
+        widget: text
+      - label: C1 - T
+        name: c1_t
+        widget: string
+      - label: C1 - B
+        name: c1_b
+        widget: text
+      - label: C2 - T
+        name: c2_t
+        widget: string
+      - label: C2 - B
+        name: c2_b
+        widget: text
+      - label: C3 - T
+        name: c3_t
+        widget: string
+      - label: C3 - B
+        name: c3_b
+        widget: text
+      - label: Aviso - T
+        name: notice_t
+        widget: string
+      - label: Aviso - B
+        name: notice_b
+        widget: text
+    - label: Politica de privacidad
+      name: privacy
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titulo
+        name: title
+        widget: string
+      - label: Updated
+        name: updated
+        widget: string
+      - label: Intro
+        name: intro
+        widget: text
+      - label: H1
+        name: h1
+        widget: string
+      - label: Parrafo 1
+        name: p1
+        widget: text
+      - label: Titulo de seccion
+        name: h2
+        widget: string
+      - label: L1
+        name: l1
+        widget: string
+      - label: L2
+        name: l2
+        widget: string
+      - label: L3
+        name: l3
+        widget: string
+      - label: H3
+        name: h3
+        widget: string
+      - label: Parrafo 2
+        name: p2
+        widget: text
+      - label: H4
+        name: h4
+        widget: string
+      - label: Parrafo 3
+        name: p3
+        widget: text
+      - label: H5
+        name: h5
+        widget: string
+      - label: Parrafo 4
+        name: p4
+        widget: text
+      - label: H6
+        name: h6
+        widget: string
+      - label: Parrafo 5
+        name: p5
+        widget: text
+    - label: Terminos de uso
+      name: terms
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titulo
+        name: title
+        widget: string
+      - label: H1
+        name: h1
+        widget: string
+      - label: Parrafo 1
+        name: p1
+        widget: text
+      - label: Titulo de seccion
+        name: h2
+        widget: string
+      - label: Parrafo 2
+        name: p2
+        widget: text
+      - label: H3
+        name: h3
+        widget: string
+      - label: Parrafo 3
+        name: p3
+        widget: text
+      - label: H4
+        name: h4
+        widget: string
+      - label: Parrafo 4
+        name: p4
+        widget: text
+      - label: H5
+        name: h5
+        widget: string
+      - label: Parrafo 5
+        name: p5
+        widget: text
+      - label: P6
+        name: p6
+        widget: text
+    - label: Accesibilidad
+      name: access
+      widget: object
+      collapsed: true
+      fields:
+      - label: Cabecera - Etiqueta superior
+        name: hero_eyebrow
+        widget: string
+      - label: Cabecera - Titulo
+        name: hero_title
+        widget: string
+      - label: Cabecera - Texto introductorio
+        name: hero_lede
+        widget: text
+      - label: H1
+        name: h1
+        widget: string
+      - label: L1
+        name: l1
+        widget: text
+      - label: L2
+        name: l2
+        widget: text
+      - label: L3
+        name: l3
+        widget: text
+      - label: L4
+        name: l4
+        widget: text
+      - label: L5
+        name: l5
+        widget: text
+      - label: L6
+        name: l6
+        widget: text
+      - label: L7
+        name: l7
+        widget: text
+      - label: L8
+        name: l8
+        widget: text
+      - label: Titulo de seccion
+        name: h2
+        widget: string
+      - label: Parrafo 1
+        name: p1
+        widget: string
+      - label: M1
+        name: m1
+        widget: text
+      - label: M2
+        name: m2
+        widget: string
+      - label: M3
+        name: m3
+        widget: text
+      - label: M4
+        name: m4
+        widget: text
+      - label: H3
+        name: h3
+        widget: string
+      - label: Parrafo 2
+        name: p2
+        widget: text
+      - label: H4
+        name: h4
+        widget: string
+      - label: Parrafo 3
+        name: p3
+        widget: text
+    - label: Investigacion
+      name: research
+      widget: object
+      collapsed: true
+      fields:
+      - label: Cabecera - Etiqueta superior
+        name: hero_eyebrow
+        widget: string
+      - label: Cabecera - Titulo
+        name: hero_title
+        widget: string
+      - label: Cabecera - Texto introductorio
+        name: hero_lede
+        widget: text
+      - label: Aviso - T
+        name: notice_t
+        widget: string
+      - label: Aviso - B
+        name: notice_b
+        widget: text
+      - label: C1 - T
+        name: c1_t
+        widget: string
+      - label: C1 - B
+        name: c1_b
+        widget: text
+      - label: C2 - T
+        name: c2_t
+        widget: string
+      - label: C2 - B
+        name: c2_b
+        widget: text
+      - label: C3 - T
+        name: c3_t
+        widget: string
+      - label: C3 - B
+        name: c3_b
+        widget: text
+      - label: C4 - T
+        name: c4_t
+        widget: string
+      - label: C4 - B
+        name: c4_b
+        widget: text
+      - label: Form - Etiqueta superior
+        name: form_eyebrow
+        widget: string
+      - label: Form - Titulo
+        name: form_title
+        widget: string
+      - label: Form - Texto introductorio
+        name: form_lede
+        widget: text
+      - label: Name
+        name: name
+        widget: string
+      - label: Inst
+        name: inst
+        widget: string
+      - label: Area
+        name: area
+        widget: string
+      - label: Msg
+        name: msg
+        widget: string
+    - label: Pie de pagina
+      name: footer
+      widget: object
+      collapsed: true
+      fields:
+      - label: Tagline
+        name: tagline
+        widget: string
+      - label: Explore
+        name: explore
+        widget: string
+      - label: About Us
+        name: aboutUs
+        widget: string
+      - label: Get Involved
+        name: getInvolved
+        widget: string
+      - label: Partners
+        name: partners
+        widget: string
+      - label: Research
+        name: research
+        widget: string
+      - label: Fundraising
+        name: fundraising
+        widget: string
+      - label: Faq
+        name: faq
+        widget: string
+      - label: Contact Form
+        name: contactForm
+        widget: string
+      - label: Privacy
+        name: privacy
+        widget: string
+      - label: Terms
+        name: terms
+        widget: string
+      - label: Accessibility
+        name: accessibility
+        widget: string
+- name: site
+  label: Codigo completo (avanzado)
+  files:
+  - file: index.html
+    label: Pagina completa (codigo HTML)
+    name: homepage
+    fields:
+    - label: Contenido HTML completo
+      name: body
+      widget: code
+      default_language: html
+      allow_language_selection: false
+      output_code_only: true
